@@ -1,4 +1,4 @@
-# TokenCreation-with-Solidity
+# TokenCreation
 
 ## **Overview**
 
