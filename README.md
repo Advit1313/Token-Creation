@@ -1,16 +1,37 @@
 # TokenCreation
-This Solidity contract implements a basic ERC20-like token with minting and burning functionalities.
 
-## **Overview**
+This Solidity contract implements a basic ERC20-like This README provides a brief overview of the Token smart contract implemented in Solidity. The contract allows minting and burning tokens, and tracks user balances.
 
-Token creation involves developing digital tokens, which are units of value issued on a blockchain, that can represent various assets or utilities. 
+## **Contract Details**
 
-## **Features**
+**Variables**
 
-**Token Details:**  Public variables for token name, abbreviation, and total supply.
+tokenName: "Aditya"
+tokenAbbrv: "1327"
+totalSupply: Total tokens in circulation
 
-**Balances:** Mapping to track balances of addresses , using Solidity.
+Mapping
+balances: Maps addresses to token balances
 
-**Mint Function:** Increases total supply and balance of specified address. It increments.
+Functions
+mint(address _to, uint256 _value)
+Mints new tokens and assigns them to the specified address.
 
-**Burn Function:** Decreases total supply and sender’s balance with a balance check. It decrements.
+Parameters:
+
+_to: Recipient address
+_value: Amount of tokens to mint
+Logic:
+
+Increases totalSupply and _to's balance by _value
+
+burn(uint256 _value)
+Burns tokens from the caller's balance.
+
+Parameters:
+
+_value: Amount of tokens to burn
+Logic:
+
+Decreases totalSupply and caller's balance by _value
+Requires caller's balance to be at least _value
